@@ -144,7 +144,7 @@ If you will see carefully in the console panel, then it first logs “First this
 
 Following example is the use case of <b>componentDidMount()</b>. In above order, excecutions are done. After 1 second, the state will change and updated state will display.
 
-Initial state is "Jordan Belfort" but after 1 second it will change it to "Hello Wallstreet".
+Initial state is "Jordan Belfort" but after 1 second it will change it to "Hello WallStreet".
 
 # Hands-on Demo
 
