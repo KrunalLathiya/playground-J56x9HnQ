@@ -1,20 +1,37 @@
-import React from 'react';
-import './app.css';
-import logo from './logo_og.png';
+import React, { Component } from 'react';
 
-export default class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            title: `[TECH.IO] React template`
-        };
+class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      data: 'Jordan Belfort'
     }
-    render() {
-        return (<div>
-            <img className='logo' src={logo}></img>
-            <h1 className='title'>
-                {this.state.title}
-            </h1>
-        </div>);
-    }
+  }
+  componentWillMount(){
+    console.log('First this called');
+  }
+
+  getData(){
+    setTimeout(() => {
+      console.log('Our data is fetched');
+      this.setState({
+        data: 'Hello WallStreet'
+      })
+    }, 1000)
+  }
+
+  componentDidMount(){
+    this.getData();
+  }
+
+  render() {
+    return(
+      <div>
+      {this.state.data}
+    </div>
+    )
+  }
 }
+
+export default App;
